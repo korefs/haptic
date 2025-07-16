@@ -16,9 +16,7 @@
 		<Label class="text-sm">Auto sync</Label>
 		<p class="text-muted-foreground text-xs">Automatically sync your notes.</p>
 		<div class="flex items-center gap-2 pt-2">
-			<Tooltip text="Coming soon">
-				<Switch bind:checked={autoSync} disabled />
-			</Tooltip>
+				<Switch bind:checked={autoSync} />
 		</div>
 	</div>
 

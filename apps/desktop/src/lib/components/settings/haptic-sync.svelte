@@ -16,9 +16,7 @@
 		<Label class="text-sm">Auto sync</Label>
 		<p class="text-muted-foreground text-xs">Automatically sync your notes.</p>
 		<div class="flex items-center gap-2 pt-2">
-			<Tooltip text="Coming soon">
-				<Switch bind:checked={autoSync} disabled />
-			</Tooltip>
+				<Switch bind:checked={autoSync} />
 		</div>
 	</div>
 
@@ -52,9 +50,7 @@
 		<Label class="text-sm">Backups</Label>
 		<p class="text-muted-foreground text-xs">Wheter or not to create scheduled backups.</p>
 		<div class="flex items-center gap-2 pt-2">
-			<Tooltip text="Coming soon">
-				<Switch bind:checked={autoBackup} disabled />
-			</Tooltip>
+				<Switch bind:checked={autoBackup} />
 		</div>
 	</div>
 

@@ -1,4 +1,5 @@
 import { writable } from 'svelte/store';
+import { startAutoSync, isSyncing, lastSync } from './sync';
 import { createEditorStore } from './components/shared/editor/editor-store';
 import { BASE_APP_SETTINGS, BASE_COLLECTION_SETTINGS } from './constants';
 import type { AppSettingsParams, CollectionSettingsParams, SettingsStateParams } from './types';
@@ -32,6 +33,8 @@ const appTheme = writable<'auto' | 'light' | 'dark'>('auto');
 const appSettings = writable<AppSettingsParams>(BASE_APP_SETTINGS);
 const collectionSettings = writable<CollectionSettingsParams>(BASE_COLLECTION_SETTINGS);
 
+startAutoSync();
+
 export {
 	activeFile,
 	appSettings,
@@ -51,5 +54,7 @@ export {
 	pageSidebarWidth,
 	resizingNoteDetailSidebar,
 	resizingPageSidebar,
-	tooltipsOpen
+	tooltipsOpen,
+	isSyncing,
+	lastSync
 };
